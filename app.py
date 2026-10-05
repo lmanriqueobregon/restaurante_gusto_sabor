@@ -17,16 +17,29 @@ app.secret_key = "gustos_sabor_clave_segura"
 
 
 # ======================================
-# Configuración MySQL
+# Configuración MySQL para bd local
 # ======================================
 
-app.config["MYSQL_HOST"] = "localhost"
-app.config["MYSQL_USER"] = "root"
-app.config["MYSQL_PASSWORD"] = ""
-app.config["MYSQL_DB"] = "restaurante_gustos_sabor"
+#app.config["MYSQL_HOST"] = "localhost"
+#app.config["MYSQL_USER"] = "root"
+#app.config["MYSQL_PASSWORD"] = ""
+#app.config["MYSQL_DB"] = "restaurante_gustos_sabor"
 
+#mysql = MySQL(app)
+
+# ======================================
+# Configuración MySQL para bd en aivent
+# ======================================
+app.config['MYSQL_HOST'] = os.environ.get('MYSQL_HOST')
+app.config['MYSQL_USER'] = os.environ.get('MYSQL_USER')
+app.config['MYSQL_PASSWORD'] = os.environ.get('MYSQL_PASSWORD')
+app.config['MYSQL_DB'] = os.environ.get('MYSQL_DB')
+app.config['MYSQL_PORT'] = int(os.environ.get('MYSQL_PORT', 3306))
+ 
+UPLOAD_FOLDER = os.path.join('static', 'videos')
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+ 
 mysql = MySQL(app)
-
 
 
 # ======================================
