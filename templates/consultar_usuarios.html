@@ -1,0 +1,83 @@
+
+<!DOCTYPE html> <!-- Define HTML5 -->
+<html lang="es"> <!-- Idioma español -->
+<head>
+    <meta charset="UTF-8"> <!-- Caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
+    <title>GUSTOS & SABOR</title> <!-- Título pestaña -->
+    <!-- Icono de la pestaña -->
+    <link rel="icon" href="IMAGENES/ICONO.png">
+    <!-- Archivo CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+
+<body>
+
+    <!-- banner superior -->
+    <header>
+        <img src="{{ url_for('static', filename='IMAGENES/LOGOTIPO.png') }}" alt="logo del proyecto" class="logo">
+        <h1>BIENVENIDOS A NUESTRO RESTAURANTE GUSTOS & SABOR</h1>
+    </header>
+
+
+<div class="container mt-5">
+
+    <h2 class="mb-4">Usuarios Registrados</h2>
+
+    
+
+<table class="table table-bordered table-hover shadow">
+
+
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Teléfono</th>
+                <th>Usuario</th>
+                <th>Rol</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+        {% if usuarios %}
+            {% for usuario in usuarios %}
+            <tr>
+                <td>{{ usuario.id_usuario }}</td>
+                <td>{{ usuario.nombre }}</td>
+                <td>{{ usuario.correo }}</td>
+                <td>{{ usuario.telefono }}</td>
+                <td>{{ usuario.nombre_usuario }}</td>
+                <td>{{ usuario.rol }}</td>
+
+               
+            </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td colspan="7" class="text-center">
+                    No hay usuarios registrados.
+                </td>
+            </tr>
+        {% endif %}
+
+        </tbody>
+
+    </table>
+
+</div>
+<div class="text-center mt-4">
+    <a href="{{ url_for('inicio_usuario') }}" class="boton-regresar">
+        ← Volver al Inicio
+    </a>
+</div>
+ <!-- banner inferior -->
+    <footer>
+        <p>RESTAURANTE GUSTOS & SABOR</p>
+        <p>LEIDY MARCELA MANRIQUE OBREGÓN</p>
+        <p>2026 - CEET - COLEGIO GABRIEL BETANCOR MEJÍA</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,220 @@
+/* Contenedor de la tabla */
+.login-form {
+    width: 95%;
+    max-width: 1200px;
+}
+
+
+/* Tabla usuarios */
+
+.tabla-usuarios {
+
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    background: white;
+    table-layout: auto;
+
+}
+
+
+/* Encabezados */
+
+.tabla-usuarios th {
+
+    background-color: #b52b05;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+
+}
+
+
+/* Celdas */
+
+.tabla-usuarios td {
+
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #555;
+    white-space: nowrap;
+
+}
+
+
+/* Filas */
+
+.tabla-usuarios tr:nth-child(even){
+
+    background-color: #fff1c9;
+
+}
+
+
+.tabla-usuarios tr:nth-child(odd){
+
+    background-color: #ffe5a6;
+
+}
+
+
+/* Botón eliminar */
+
+.tabla-usuarios button {
+
+    background-color: #c7350b;
+    color: white;
+
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 25px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+}
+
+
+.tabla-usuarios button:hover {
+
+    background-color: #8f2205;
+
+}
+
+
+
+/* Evita que la tabla se salga */
+
+.contenedor {
+
+    width: 95%;
+    margin: auto;
+    overflow-x: auto;
+
+}
+header {
+
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+    background: linear-gradient(135deg, #7a1a02, #b8320a);
+    padding: 40px 20px;
+    color: rgb(10, 9, 9);
+    text-align: center;
+
+}
+
+body {
+    font-family: Arial, sans-serif; 
+    background-color: #f4f4f4; 
+}
+
+
+.logo {
+
+   
+    width: 100px; 
+    height: auto;
+    border-radius: 10px; 
+    justify-content: flex-start;
+
+}
+
+
+.menu-principal ul {
+    list-style: none; 
+    display: flex;
+    width: 90%; 
+    max-width: 1100px; 
+    background: #f4f4f4;
+    padding: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    justify-content: space-between; 
+}
+
+
+.menu-principal ul li {
+
+    flex: 20px; 
+
+}
+
+.menu-principal ul li a {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    padding: 12px 0;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+
+}
+
+
+.menu-principal ul li a:hover {
+
+    background: linear-gradient(135deg, #7a1a02, #b8320a);
+    color: rgb(255, 250, 250);
+    transform: translateY(-2px);
+
+}
+
+
+footer
+{
+    font-weight: bold;
+    background-color: rgb(133, 29, 3);
+    color:rgb(10, 9, 9);
+    text-align: center;
+    padding: 35px;
+}
+.contenido {
+
+    background-image: url("../restaurante_gustos_y_sabor/IMAGENES/fondo.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 20px 20px; 
+    text-align: center;
+    color:black; 
+    position: relative;
+
+}
+
+.registro-container {
+
+    background-image: url("IMAGENES/fondo_restaurante.jpg"); 
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    position: relative;
+
+}
+.boton-regresar{
+    display: inline-block;
+    background-color: #b8320a;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.boton-regresar:hover{
+    background-color: #b8320a;
+     text-align: center;
+}

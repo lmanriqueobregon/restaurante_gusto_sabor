@@ -1,0 +1,92 @@
+
+<!DOCTYPE html> <!-- Define HTML5 -->
+<html lang="es"> <!-- Idioma español -->
+<head>
+    <meta charset="UTF-8"> <!-- Caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
+    <title>GUSTOS & SABOR</title> <!-- Título pestaña -->
+    <!-- Icono de la pestaña -->
+    <link rel="icon" href="IMAGENES/ICONO.png">
+    <!-- Archivo CSS -->
+     <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+
+<body>
+
+    <!-- banner superior -->
+   <header>
+        <img src="{{ url_for('static', filename='IMAGENES/LOGOTIPO.png') }}" alt="logo del proyecto" class="logo">
+        <h1>BIENVENIDOS A NUESTRO RESTAURANTE GUSTOS & SABOR</h1>
+    </header>
+    <!-- menu -->
+    <nav class="menu-principal">
+    <ul>
+        <li>
+            <a href="{{ url_for('inicio') }}">Inicio</a>
+        </li>
+
+        <li>
+            <a href="{{ url_for('nosotros') }}">Nosotros</a>
+        </li>
+
+        <li>
+            <a href="{{ url_for('mision') }}">Misión</a>
+        </li>
+
+        <li>
+            <a href="{{ url_for('registro') }}">Registro</a>
+        </li>
+
+        <li>
+            <a href="{{ url_for('login') }}">Login</a>
+        </li>
+    </ul>
+</nav>
+
+    <section class="historia-container">
+
+        <div class="historia-card">
+    
+            <!-- MISIÓN -->
+            <h2 Nuestra Misión</h2>
+    
+            <p>
+                En <strong>Gustos & Sabor</strong> nuestra misión es más que alimentar el cuerpo…
+                es alimentar el alma.
+            </p>
+    
+            <p>
+                Creamos momentos llenos de amor, donde cada plato es preparado con pasión,
+                dedicación y el deseo profundo de hacerte sentir como en casa, pero con un toque mágico.
+            </p>
+    
+            <!-- VISIÓN -->
+            <h2>🌹 Nuestra Visión</h2>
+    
+            <p>
+                Soñamos con ser un lugar donde las personas no solo vengan a comer,
+                sino a enamorarse de cada experiencia.
+            </p>
+    
+            <p>
+                Queremos ser recordados como ese rincón especial donde nacen sonrisas,
+                se celebran historias y se construyen recuerdos que duran para siempre.
+            </p>
+    
+            <!-- FRASE ROMÁNTICA -->
+            <p class="frase-romantica">
+                “Porque en cada sabor, hay un pedacito de amor.”
+            </p>
+    
+        </div>
+    
+    </section>
+    <!-- banner inferior -->
+    <footer>
+        <p>RESTAURANTE GUSTOS & SABOR</p>
+        <p>LEIDY MARCELA MANRIQUE OBREGÓN</p>
+        <p>2026 - CEET - COLEGIO GABRIEL BETANCOR MEJÍA</p>
+    </footer>
+
+</body>
+</html>

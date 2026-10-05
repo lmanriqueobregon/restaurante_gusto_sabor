@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Eliminar Usuarios</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='estilos_quienes.css') }}">
+
+</head>
+
+
+<body>
+
+
+<header class="encabezado">
+
+
+<div class="logo-titulo">
+
+<img src="{{ url_for('static', filename='IMAGENES/LOGOTIPO.png') }}" class="logo">
+
+<h1>
+RESTAURANTE GUSTOS & SABOR
+</h1>
+
+</div>
+
+
+</header>
+
+
+
+<nav class="menu-principal">
+
+<ul>
+
+<li>
+<a href="{{ url_for('inicio_usuario') }}">
+Inicio
+</a>
+</li>
+
+
+<li>
+<a href="{{ url_for('consultar_usuarios') }}">
+Consultar usuarios
+</a>
+</li>
+
+
+<li>
+<a href="{{ url_for('logout') }}">
+Cerrar sesión
+</a>
+</li>
+
+
+</ul>
+
+</nav>
+
+
+
+<section class="login-container">
+
+
+<div class="login-form">
+
+
+<h2>
+Eliminar usuarios registrados
+</h2>
+
+
+
+<table class="tabla-usuarios">
+
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+
+<th>Nombre</th>
+
+<th>Correo</th>
+
+<th>Teléfono</th>
+
+<th>Usuario</th>
+
+<th>Rol</th>
+
+<th>Acción</th>
+
+
+</tr>
+
+</thead>
+
+
+
+<tbody>
+
+
+{% for usuario in usuarios %}
+
+
+<tr>
+
+
+<td>
+{{ usuario.id_usuario }}
+</td>
+
+
+<td>
+{{ usuario.nombre }}
+</td>
+
+
+<td>
+{{ usuario.correo }}
+</td>
+
+
+<td>
+{{ usuario.telefono }}
+</td>
+
+
+<td>
+{{ usuario.nombre_usuario }}
+</td>
+
+
+<td>
+{{ usuario.rol }}
+</td>
+
+
+
+<td>
+
+
+<form method="POST"
+action="{{ url_for('eliminar_usuario', id=usuario.id_usuario) }}">
+
+
+<button type="submit"
+onclick="return confirm('¿Desea eliminar este usuario?');">
+
+Eliminar
+
+</button>
+
+
+</form>
+
+
+</td>
+
+
+
+</tr>
+
+
+{% endfor %}
+
+
+</tbody>
+
+
+</table>
+
+
+
+<br>
+
+<div class="text-center mt-4">
+    <a href="{{ url_for('inicio_usuario') }}" class="boton-regresar">
+        ← Volver al Inicio
+    </a>
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<footer>
+
+<p>
+RESTAURANTE GUSTOS & SABOR
+</p>
+
+
+<p>
+LEIDY MARCELA MANRIQUE OBREGÓN
+</p>
+
+
+<p>
+2026 - CEET - COLEGIO GABRIEL BETANCOR MEJÍA
+</p>
+
+
+</footer>
+
+
+</body>
+
+</html>

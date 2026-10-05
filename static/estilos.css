@@ -1,0 +1,604 @@
+header {
+
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+    background: linear-gradient(135deg, #7a1a02, #b8320a);
+    padding: 40px 20px;
+    color: rgb(10, 9, 9);
+    text-align: center;
+
+}
+
+body {
+    font-family: Arial, sans-serif; 
+    background-color: #f4f4f4; 
+}
+
+
+.logo {
+
+   
+    width: 100px; 
+    height: auto;
+    border-radius: 10px; 
+    justify-content: flex-start;
+
+}
+
+
+.menu-principal ul {
+    list-style: none; 
+    display: flex;
+    width: 90%; 
+    max-width: 1100px; 
+    background: #f4f4f4;
+    padding: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    justify-content: space-between; 
+}
+
+
+.menu-principal ul li {
+
+    flex: 20px; 
+
+}
+
+.menu-principal ul li a {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    padding: 12px 0;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+
+}
+
+
+.menu-principal ul li a:hover {
+
+    background: linear-gradient(135deg, #7a1a02, #b8320a);
+    color: rgb(255, 250, 250);
+    transform: translateY(-2px);
+
+}
+
+
+footer
+{
+    font-weight: bold;
+    background-color: rgb(133, 29, 3);
+    color:rgb(10, 9, 9);
+    text-align: center;
+    padding: 35px;
+}
+.contenido {
+
+    background-image: url("../restaurante_gustos_y_sabor/IMAGENES/fondo.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    padding: 20px 20px; 
+    text-align: center;
+    color:black; 
+    position: relative;
+
+}
+.boton
+{
+    padding: 10px 20px;
+    background-color: brown;
+    text-decoration: none;
+    border-radius: 55px;
+    color: black;
+    display: inline-block; 
+    position: absolute;
+    margin-top: 15px;
+}
+/* SLIDER */
+.slider {
+    width: 100%; 
+    overflow: hidden; 
+}
+
+.slides {
+
+    display: flex;
+    width: 300%;
+    animation: slide 105s infinite;
+
+}
+
+/* IMÁGENES */
+.slides img {
+
+    width: 100%; 
+    height: 500px; 
+    object-fit: cover; 
+
+}
+
+/* ANIMACIÓN */
+@keyframes slide {
+    0% { margin-left: 0; }
+    33% { margin-left: -100%; }
+    66% { margin-left: -200%; }
+}
+
+
+.header-simple {
+
+    background: linear-gradient(135deg, #7a1a02, #b8320a);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+/* CONTENEDOR CON IMAGEN DE FONDO */
+.historia-container {
+
+    background-image: url("IMAGENES/fondo_restaurante.jpg"); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    position: relative;
+}
+
+
+.historia-container::before {
+
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6); 
+
+}
+
+
+.historia-card {
+
+    position: relative;
+    background: rgba(255,255,255,0.95);
+    padding: 40px;
+    max-width: 800px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    text-align: center;
+
+}
+
+.historia-card h2 {
+
+    color: #7a1a02;
+    margin-bottom: 20px;
+
+}
+
+.historia-card p {
+
+    font-size: 16px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 20px;
+
+}
+
+.frase-final {
+
+    font-style: italic;
+    font-size: 18px;
+    color: #b8320a;
+    font-weight: bold;
+
+}
+
+.registro-container {
+
+    background-image: url("IMAGENES/fondo_restaurante.jpg"); 
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    position: relative;
+
+}
+
+
+.registro-container::before {
+
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+
+}
+
+
+.registro-form {
+
+    position: relative;
+    background: rgba(255,255,255,0.95);
+    padding: 40px;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    text-align: center;
+
+}
+
+
+.registro-form h2 {
+
+    color: #7a1a02;
+    margin-bottom: 20px;
+
+}
+
+
+.registro-form label {
+
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+
+}
+
+
+.registro-form input {
+
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+
+}
+
+
+.registro-form button {
+
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: #b8320a;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.registro-form button:hover {
+
+    background: #ff9800;
+    transform: translateY(-2px);
+}
+
+
+.mensaje {
+
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+
+}
+
+.terminos {
+
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+    gap: 10px;
+}
+
+
+.terminos input {
+
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+
+.terminos a {
+
+    color: #b8320a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.terminos a:hover {
+
+    text-decoration: underline;
+}
+.terminos-container {
+
+    background-image: url("IMAGENES/fondo_restaurante.jpg"); 
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+
+.terminos-card {
+
+    background: white;
+    padding: 40px;
+    max-width: 700px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    text-align: center;
+
+}
+
+
+.terminos-card p {
+
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #333;
+
+}
+
+.final {
+
+    font-style: italic;
+    color: #7a1a02;
+    font-weight: bold;
+}
+
+.login-container {
+
+    background-image: url("IMAGENES/fondo_restaurante.jpg"); 
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    position: relative;
+}
+
+
+.login-container::before {
+
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+
+.login-form {
+
+    position: relative;
+    background: rgba(255,255,255,0.95);
+    padding: 40px;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    text-align: center;
+
+}
+
+
+.login-form h2 {
+
+    color: #7a1a02;
+    margin-bottom: 20px;
+}
+
+
+.login-form label {
+
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+
+}
+
+
+.login-form input {
+
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+
+}
+
+
+.recordar {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 8px;
+    font-size: 14px;
+}
+
+
+.login-form button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: #b8320a;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.login-form button:hover {
+    background: #ff9800;
+    transform: translateY(-2px);
+}
+
+
+.extra {
+
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+
+.extra a {
+
+    color: #b8320a;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.extra a:hover {
+    text-decoration: underline;
+}
+.usuario{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.foto{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+}
+.encabezado{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+   
+    color:white;
+  
+}
+
+.logo-titulo{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.logo{
+    width:90px;
+}
+
+.usuario{
+    text-align:right;
+    font-size:18px;
+}
+
+.usuario strong{
+    display:block;
+    font-size:22px;
+    color:#ebeae4;
+}
+
+--estilos tabla usuarios
+ table{
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    thead{
+        background-color: #b8320a; /* Rojo oscuro */
+        color: white;
+        text-align: center;
+    }
+
+    tbody tr:nth-child(even){
+        background-color: #FFF3CD; /* Amarillo claro */
+    }
+
+    tbody tr:nth-child(odd){
+        background-color: #FFE5B4; /* Naranja claro */
+    }
+
+    tbody tr:hover{
+        background-color: #FFC107;
+        color: black;
+        transition: 0.3s;
+    }
+
+    td, th{
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    h2{
+        text-align: center;
+        color: #b8320a;
+        font-weight: bold;
+    }
+    .container{
+    width: 90%;
+    margin: 50px auto;
+}
+
+footer{
+    margin-top: 40px;
+    background: #b8320a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.boton-regresar{
+    display: inline-block;
+    background-color: #b8320a;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.boton-regresar:hover{
+    background-color: #b8320a;
+     text-align: center;
+}

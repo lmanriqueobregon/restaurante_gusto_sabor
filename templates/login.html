@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUSTOS&SABOR</title>
+    <link rel= "icon" href="..//restaurante_gustos_y_sabor/IMAGENES/ICONO.png">
+      <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='IMAGENES/LOGOTIPO.png') }}" alt="logo del proyecto" class="logo">
+        <h1>BIENVENIDOS A NUESTRO RESTAURANTE GUSTOS & SABOR</h1>
+    </header>
+    <!-- menu -->
+    <nav class="menu-principal">
+    <ul>
+        <li>
+            <a href="{{ url_for('inicio') }}">Inicio</a>
+        </li>
+
+        <li>
+            <a href="{{ url_for('nosotros') }}">Nosotros</a>
+        </li>
+
+        <li>
+            <a href="{{ url_for('mision') }}">Misión</a>
+        </li>
+
+        <li>
+            <a href="{{ url_for('registro') }}">Registro</a>
+        </li>
+
+        <li>
+            <a href="{{ url_for('login') }}">Login</a>
+        </li>
+    </ul>
+</nav>
+    <section class="login-container">
+
+        <form class="login-form" method="POST" action="{{ url_for('login') }}">
+
+    <h2>Bienvenido de nuevo</h2>
+
+
+    <!-- USUARIO -->
+
+    <label>Usuario</label>
+
+    <input 
+    type="text"
+    name="usuario"
+    placeholder="Ingresa tu usuario"
+    required>
+
+
+    <!-- CONTRASEÑA -->
+
+    <label>Contraseña</label>
+
+    <input 
+    type="password"
+    name="password"
+    placeholder="Ingresa tu contraseña"
+    required>
+
+
+    <!-- RECORDAR -->
+
+    <div class="recordar">
+
+        <input type="checkbox" id="recordar">
+
+        <label for="recordar">
+            Recordarme
+        </label>
+
+    </div>
+
+
+    <!-- BOTÓN -->
+
+    <button type="submit">
+        Ingresar
+    </button>
+
+
+    <p class="extra">
+
+        ¿No tienes cuenta?
+
+        <a href="{{ url_for('registro') }}">
+            Regístrate aquí
+        </a>
+
+    </p>
+
+
+</form>
+    </section>
+    <footer> 
+        <p> RESTAURANTE GUSTOS&SABOR </p>
+        <p> LEIDY MARCELA MANRIQUE OBREGON</p>
+        <p> 2026 -CEET- COLEGIO GABRIEL BETANCOR MEJIA </p>
+        
+
+    </footer>
+</body>
+</html>

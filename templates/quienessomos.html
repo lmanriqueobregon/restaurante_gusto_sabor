@@ -1,0 +1,87 @@
+
+<!DOCTYPE html> <!-- Define HTML5 -->
+<html lang="es"> <!-- Idioma español -->
+<head>
+    <meta charset="UTF-8"> <!-- Caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
+    <title>GUSTOS & SABOR</title> <!-- Título pestaña -->
+    <!-- Icono de la pestaña -->
+    <link rel="icon" href="IMAGENES/ICONO.png">
+    <!-- Archivo CSS -->
+     <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+
+</head>
+
+<body>
+
+    <!-- banner superior -->
+    <header>
+        <img src="{{ url_for('static', filename='IMAGENES/LOGOTIPO.png') }}" alt="logo del proyecto" class="logo">
+        <h1>BIENVENIDOS A NUESTRO RESTAURANTE GUSTOS & SABOR</h1>
+    </header>
+    <!-- menu -->
+    <nav class="menu-principal">
+    <ul>
+        <li>
+            <a href="{{ url_for('inicio') }}">Inicio</a>
+        </li>
+
+        <li>
+            <a href="{{ url_for('nosotros') }}">Nosotros</a>
+        </li>
+
+        <li>
+            <a href="{{ url_for('mision') }}">Misión</a>
+        </li>
+
+        <li>
+            <a href="{{ url_for('registro') }}">Registro</a>
+        </li>
+
+        <li>
+            <a href="{{ url_for('login') }}">Login</a>
+        </li>
+    </ul>
+</nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <section class="historia-container">
+
+        <div class="historia-card">
+    
+            <h2>Gustos & Sabor</h2>
+    
+            <p>
+                Todo comenzó en una pequeña cocina familiar, donde el aroma del amor por la comida
+                llenaba cada rincón. No teníamos un gran restaurante, pero sí un gran sueño:
+                crear un lugar donde cada plato contara una historia.
+            </p>
+    
+            <p>
+                Entre recetas heredadas de generación en generación, descubrimos que la verdadera magia
+                no estaba solo en los ingredientes, sino en las emociones que despertaban.
+            </p>
+    
+            <p>
+                Con el tiempo, ese sueño creció. Las mesas se llenaron de risas, celebraciones y momentos
+                que jamás se olvidan. Así nació <strong>Gustos & Sabor</strong>, un lugar donde la comida
+                no solo se sirve… se vive.
+            </p>
+    
+            <p class="frase-final">
+                “Cada plato tiene un recuerdo… y cada visita, una nueva historia por contar.”
+            </p>
+    
+        </div>
+    
+    </section>
+    
+    <!-- banner inferior -->
+    <footer>
+        <p>RESTAURANTE GUSTOS & SABOR</p>
+        <p>LEIDY MARCELA MANRIQUE OBREGÓN</p>
+        <p>2026 - CEET - COLEGIO GABRIEL BETANCOR MEJÍA</p>
+    </footer>
+
+</body>
+</html>

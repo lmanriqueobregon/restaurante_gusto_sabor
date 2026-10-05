@@ -1,0 +1,99 @@
+
+<!DOCTYPE html> <!-- Define HTML5 -->
+<html lang="es"> <!-- Idioma español -->
+<head>
+    <meta charset="UTF-8"> <!-- Caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
+    <title>GUSTOS & SABOR</title> <!-- Título pestaña -->
+    <!-- Icono de la pestaña -->
+    <link rel="icon" href="IMAGENES/ICONO.png">
+    <!-- Archivo CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+
+</head>
+
+<body>
+
+    <!-- banner superior -->
+   <header>
+        <img src="{{ url_for('static', filename='IMAGENES/LOGOTIPO.png') }}" alt="logo del proyecto" class="logo">
+        <h1>BIENVENIDOS A NUESTRO RESTAURANTE GUSTOS & SABOR</h1>
+    </header>
+    <!-- menu -->
+    <nav class="menu-principal">
+    <ul>
+        <li>
+            <a href="{{ url_for('inicio') }}">Inicio</a>
+        </li>
+
+        <li>
+            <a href="{{ url_for('nosotros') }}">Nosotros</a>
+        </li>
+
+        <li>
+            <a href="{{ url_for('mision') }}">Misión</a>
+        </li>
+
+        <li>
+            <a href="{{ url_for('registro') }}">Registro</a>
+        </li>
+
+        <li>
+            <a href="{{ url_for('login') }}">Login</a>
+        </li>
+    </ul>
+</nav>
+    <section class="registro-container">
+
+        <form class="registro-form" method="POST" action="{{ url_for('registro') }}">
+    
+            <h2> Únete a Gustos & Sabor</h2>
+    
+            <!-- NOMBRE -->
+            <label>Nombre completo</label>
+            <input type="text" name="nombre" placeholder="Ej: Juan Pérez" required>
+    
+            <!-- CORREO -->
+            <label>Correo electrónico</label>
+            <input type="email" name="correo" placeholder="Ej: correo@gmail.com" required>
+    
+            <!-- TELÉFONO -->
+            <label>Teléfono</label>
+            <input type="tel" name="telefono" placeholder="Ej: 3001234567" required>
+    
+            <!-- USUARIO -->
+            <label>Nombre de usuario</label>
+            <input type="text" name="usuario" placeholder="Ej: juan123" required>
+    
+            <!-- CONTRASEÑA -->
+            <label>Contraseña</label>
+            <input type="password" name="password" placeholder="Crea una contraseña" required>
+            <div class="terminos">
+
+                <input type="checkbox" id="acepto" required>
+            
+                <label for="acepto">
+                    Acepto los <a href="terminos.html" target="_blank">términos y condiciones</a> del restaurante
+                </label>
+            
+            </div>
+            <!-- BOTÓN -->
+            <button type="submit">Registrarme</button>
+    
+            <p class="mensaje">
+                Al registrarte, aceptas ser parte de nuestra familia gastronómica ❤️
+            </p>
+            
+        </form>
+    
+    </section>
+    </section>
+    <!-- banner inferior -->
+    <footer>
+        <p>RESTAURANTE GUSTOS & SABOR</p>
+        <p>LEIDY MARCELA MANRIQUE OBREGÓN</p>
+        <p>2026 - CEET - COLEGIO GABRIEL BETANCOR MEJÍA</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Usuarios</title>
+
+    <link rel="icon" href="{{ url_for('static', filename='IMAGENES/ICONO.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+
+<body>
+
+<header>
+    <img src="{{ url_for('static', filename='IMAGENES/LOGOTIPO.png') }}" class="logo">
+    <h1>USUARIOS REGISTRADOS</h1>
+</header>
+
+<div class="contenedor">
+
+<table class="tabla-usuarios">
+
+    <thead>
+
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Teléfono</th>
+            <th>Usuario</th>
+            <th>Rol</th>
+            <th>Acciones</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+    {% if usuarios %}
+
+        {% for usuario in usuarios %}
+
+        <tr>
+
+            <td>{{ usuario.id_usuario }}</td>
+            <td>{{ usuario.nombre }}</td>
+            <td>{{ usuario.correo }}</td>
+            <td>{{ usuario.telefono }}</td>
+            <td>{{ usuario.nombre_usuario }}</td>
+            <td>{{ usuario.rol }}</td>
+
+            <td>
+
+                <a class="btn-eliminar"
+                   href="{{ url_for('eliminar_usuario', id=usuario.id_usuario) }}">
+                    Eliminar
+                </a>
+
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    {% else %}
+
+        <tr>
+            <td colspan="7">No existen usuarios registrados.</td>
+        </tr>
+
+    {% endif %}
+
+    </tbody>
+
+</table>
+
+<br>
+
+<a href="{{ url_for('inicio_usuario') }}" class="boton-regresar">
+    Volver al inicio
+</a>
+
+</div>
+
+<footer>
+    <p>RESTAURANTE GUSTOS & SABOR</p>
+    <p>2026</p>
+</footer>
+
+</body>
+</html>

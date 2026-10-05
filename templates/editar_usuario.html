@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Editar Usuario</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+
+</head>
+
+
+<body>
+
+
+<header class="encabezado">
+
+<div class="logo-titulo">
+
+<img src="{{ url_for('static', filename='IMAGENES/LOGOTIPO.png') }}" class="logo">
+
+<h1>RESTAURANTE GUSTOS & SABOR</h1>
+
+</div>
+
+
+<div class="usuario">
+
+<span>👤 Usuario</span>
+
+<strong>{{ usuario.nombre }}</strong>
+
+</div>
+
+
+</header>
+
+
+
+<section class="login-container">
+
+
+<div class="login-form">
+
+
+<h2>Editar Usuario</h2>
+
+
+
+<form method="POST">
+
+
+<label>Nombre</label>
+
+<input 
+type="text"
+name="nombre"
+value="{{ usuario.nombre }}"
+required>
+
+
+<label>Correo</label>
+
+<input
+type="email"
+name="correo"
+value="{{ usuario.correo }}"
+required>
+
+
+
+<label>Teléfono</label>
+
+<input
+type="text"
+name="telefono"
+value="{{ usuario.telefono }}"
+required>
+
+
+
+<label>Usuario</label>
+
+<input
+type="text"
+name="nombre_usuario"
+value="{{ usuario.nombre_usuario }}"
+required>
+
+
+
+<label>Rol</label>
+
+<select name="rol">
+
+
+<option value="Administrador">
+Administrador
+</option>
+
+
+<option value="Cliente">
+Cliente
+</option>
+
+
+<option value="Empleado">
+Empleado
+</option>
+
+
+</select>
+
+
+
+<button type="submit">
+Guardar cambios
+</button>
+
+
+<a href="{{ url_for('consultar_usuarios') }}">
+Cancelar
+</a>
+
+
+
+</form>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<footer>
+
+<p>RESTAURANTE GUSTOS & SABOR</p>
+
+<p>LEIDY MARCELA MANRIQUE OBREGÓN</p>
+
+<p>2026 - CEET - COLEGIO GABRIEL BETANCOR MEJÍA</p>
+
+
+</footer>
+
+
+</body>
+
+</html>

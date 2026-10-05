@@ -1,0 +1,70 @@
+
+<!DOCTYPE html> <!-- Define HTML5 -->
+<html lang="es"> <!-- Idioma español -->
+<head>
+    <meta charset="UTF-8"> <!-- Caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
+    <title>GUSTOS & SABOR</title> <!-- Título pestaña -->
+    <!-- Icono de la pestaña -->
+    <link rel="icon" href="IMAGENES/ICONO.png">
+    <!-- Archivo CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+
+<body>
+
+    <!-- banner superior -->
+    <header>
+        <img src="{{ url_for('static', filename='IMAGENES/LOGOTIPO.png') }}" alt="logo del proyecto" class="logo">
+        <h1>BIENVENIDOS A NUESTRO RESTAURANTE GUSTOS & SABOR</h1>
+    </header>
+    <!-- menu -->
+    <nav class="menu-principal">
+    <ul>
+        <li>
+            <a href="{{ url_for('inicio') }}">Inicio</a>
+        </li>
+
+        <li>
+            <a href="{{ url_for('nosotros') }}">Nosotros</a>
+        </li>
+
+        <li>
+            <a href="{{ url_for('mision') }}">Misión</a>
+        </li>
+
+        <li>
+            <a href="{{ url_for('registro') }}">Registro</a>
+        </li>
+
+        <li>
+            <a href="{{ url_for('login') }}">Login</a>
+        </li>
+    </ul>
+</nav>
+    <!-- SLIDER -->
+    <section class="slider">
+        <div class="slides">
+
+            <!-- 5 imágenes que se cargan en el slider-->
+                <img src="{{ url_for('static', filename='IMAGENES/m1.png') }}" alt="Comida 1">
+
+                <img src="{{ url_for('static', filename='IMAGENES/m2.png') }}" alt="Comida 2">
+
+                <img src="{{ url_for('static', filename='IMAGENES/m3.png') }}" alt="Comida 3">
+
+                <img src="{{ url_for('static', filename='IMAGENES/m4.png') }}" alt="Comida 4">
+
+                <img src="{{ url_for('static', filename='IMAGENES/m5.png') }}" alt="Comida 5">
+
+        </div>
+    </section>
+    <!-- banner inferior -->
+    <footer>
+        <p>RESTAURANTE GUSTOS & SABOR</p>
+        <p>LEIDY MARCELA MANRIQUE OBREGÓN</p>
+        <p>2026 - CEET - COLEGIO GABRIEL BETANCOR MEJÍA</p>
+    </footer>
+
+</body>
+</html>
