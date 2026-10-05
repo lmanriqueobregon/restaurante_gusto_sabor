@@ -5,7 +5,7 @@ import MySQLdb.cursors
 from openpyxl import Workbook
 from flask import send_file
 import io
-
+import os
 
 # ======================================
 # Crear aplicación Flask
@@ -28,17 +28,33 @@ app.secret_key = "gustos_sabor_clave_segura"
 #mysql = MySQL(app)
 
 # ======================================
-# Configuración MySQL para bd en aivent
+# Configuración MySQL para bd en aiventgit
 # ======================================
-app.config['MYSQL_HOST'] = os.environ.get('MYSQL_HOST')
-app.config['MYSQL_USER'] = os.environ.get('MYSQL_USER')
-app.config['MYSQL_PASSWORD'] = os.environ.get('MYSQL_PASSWORD')
-app.config['MYSQL_DB'] = os.environ.get('MYSQL_DB')
-app.config['MYSQL_PORT'] = int(os.environ.get('MYSQL_PORT', 3306))
- 
+
+
+MYSQL_HOST = os.environ.get('MYSQL_HOST')
+MYSQL_USER = os.environ.get('MYSQL_USER')
+MYSQL_PASSWORD = os.environ.get('MYSQL_PASSWORD')
+MYSQL_DB = os.environ.get('MYSQL_DB')
+MYSQL_PORT = os.environ.get('MYSQL_PORT')
+
+print("MYSQL_HOST:", MYSQL_HOST)
+print("MYSQL_USER:", MYSQL_USER)
+print("MYSQL_DB:", MYSQL_DB)
+print("MYSQL_PORT:", MYSQL_PORT)
+
+if not all([MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DB, MYSQL_PORT]):
+    raise RuntimeError("Faltan variables de entorno de MySQL")
+
+app.config['MYSQL_HOST'] = MYSQL_HOST
+app.config['MYSQL_USER'] = MYSQL_USER
+app.config['MYSQL_PASSWORD'] = MYSQL_PASSWORD
+app.config['MYSQL_DB'] = MYSQL_DB
+app.config['MYSQL_PORT'] = int(MYSQL_PORT)
+
 UPLOAD_FOLDER = os.path.join('static', 'videos')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
- 
+
 mysql = MySQL(app)
 
 
