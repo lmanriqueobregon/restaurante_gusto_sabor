@@ -32,28 +32,27 @@ app.secret_key = "gustos_sabor_clave_segura"
 # ======================================
 
 
-MYSQL_HOST = os.environ.get('MYSQL_HOST')
-MYSQL_USER = os.environ.get('MYSQL_USER')
-MYSQL_PASSWORD = os.environ.get('MYSQL_PASSWORD')
-MYSQL_DB = os.environ.get('MYSQL_DB')
-MYSQL_PORT = os.environ.get('MYSQL_PORT')
+MYSQL_HOST = os.getenv("MYSQL_HOST")
+MYSQL_USER = os.getenv("MYSQL_USER")
+MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD")
+MYSQL_DB = os.getenv("MYSQL_DB")
+MYSQL_PORT = os.getenv("MYSQL_PORT")
 
-print("MYSQL_HOST:", MYSQL_HOST)
-print("MYSQL_USER:", MYSQL_USER)
-print("MYSQL_DB:", MYSQL_DB)
-print("MYSQL_PORT:", MYSQL_PORT)
+print("========== MYSQL ==========")
+print("HOST:", MYSQL_HOST)
+print("USER:", MYSQL_USER)
+print("DB:", MYSQL_DB)
+print("PORT:", MYSQL_PORT)
+print("===========================")
 
 if not all([MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DB, MYSQL_PORT]):
     raise RuntimeError("Faltan variables de entorno de MySQL")
 
-app.config['MYSQL_HOST'] = MYSQL_HOST
-app.config['MYSQL_USER'] = MYSQL_USER
-app.config['MYSQL_PASSWORD'] = MYSQL_PASSWORD
-app.config['MYSQL_DB'] = MYSQL_DB
-app.config['MYSQL_PORT'] = int(MYSQL_PORT)
-
-UPLOAD_FOLDER = os.path.join('static', 'videos')
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config["MYSQL_HOST"] = MYSQL_HOST
+app.config["MYSQL_USER"] = MYSQL_USER
+app.config["MYSQL_PASSWORD"] = MYSQL_PASSWORD
+app.config["MYSQL_DB"] = MYSQL_DB
+app.config["MYSQL_PORT"] = int(MYSQL_PORT)
 
 mysql = MySQL(app)
 
